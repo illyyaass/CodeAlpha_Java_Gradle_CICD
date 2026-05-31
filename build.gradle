@@ -1,0 +1,19 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral() // مستودع تحميل المكتبات أوتوماتيكياً
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0' // مكتبة الـ Unit Test
+}
+
+application {
+    mainClass = 'com.codealpha.App' // تحديد الكلاس الرئيسي للتشغيل
+}
+
+tasks.named('test') {
+    useJUnitPlatform() // تفعيل منصة الفحص
+}
